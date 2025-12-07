@@ -12,7 +12,7 @@ public class SimpleWikiTest {
     void test01() {
         Configuration.browser="firefox";
         Configuration.webdriverLogsEnabled=true;
-        Configuration.browserBinary="/usr/bin/google-chrome";
+        //Configuration.browserBinary="/usr/bin/google-chrome";
         //System.setProperty("webdriver.firefox.logfile", "/tmp/firefox.log");
         //System.setProperty("webdriver.chrome.verboseLogging", "true");
         //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
