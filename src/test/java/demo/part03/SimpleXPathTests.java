@@ -76,4 +76,19 @@ public class SimpleXPathTests {
     void testInfoParagraph() {
         $x("//p[@class='info-text'][1]").shouldHave(text("Это первый информационный текст."));
     }
+
+
+    @Test
+    void testxPathAddPizza() {
+        //https://slqamsk.github.io/cases/pizza/v08/ -
+        // написать автотест, который добавит пиццы "Маргарита" и "Четыре сыра" в корзину,
+        // не пользуясь атрибутом data-id.
+        open("https://slqamsk.github.io/cases/pizza/v08/");
+        SelenideElement se1 = $x("//h3[.='Маргарита']");
+        System.out.println("Элемент с названием пиццы: тег: " + se1.getTagName() + ", текст: " + se1.text());
+        SelenideElement se2 = $x("//h3[.='Маргарита']/..");
+        System.out.println("Его родитель: тег: " + se2.getTagName() + ", текст: " + se2.text());
+        SelenideElement se3 = $x("//h3[.='Маргарита']/../button");
+        System.out.println("Кнопка: тег: " + se3.getTagName() + ", текст: " + se3.text());
+    }
 }
